@@ -4,7 +4,6 @@ import 'package:bookly1/core/utils/assets.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../../constens.dart';
 
@@ -38,6 +37,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       vsync: this,
       duration: const Duration(seconds: 10),
     );
-    slidingAnimation = Tween<Offset>(begin: Offset(0, 2), end: Offset.zero)
+    slidingAnimation = Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
         .animate(animationController);
     animationController.forward();
   }
