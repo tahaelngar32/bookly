@@ -1,0 +1,18 @@
+import 'package:bookly1/Features/home/data/presentation/views/home_view.dart';
+import 'package:bookly1/Features/splash/presentation/views/splash_view.dart';
+import 'package:go_router/go_router.dart';
+
+abstract class AppRouter {
+  static final route = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const SplashView(),
+    ),
+     GoRoute(
+      path: '/homeView',
+      builder: (context, state) => const HomeView(),
+    )
+  ],
+);
+}
