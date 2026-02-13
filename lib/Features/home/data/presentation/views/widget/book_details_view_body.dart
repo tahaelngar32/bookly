@@ -1,7 +1,9 @@
 import 'package:bookly1/Features/home/data/presentation/views/widget/book_reating.dart';
+import 'package:bookly1/Features/home/data/presentation/views/widget/books_action.dart';
 import 'package:bookly1/Features/home/data/presentation/views/widget/custom_app_bar_book_details.dart';
 import 'package:bookly1/Features/home/data/presentation/views/widget/custom_book_image.dart';
 import 'package:bookly1/core/utils/styles.dart';
+import 'package:bookly1/core/utils/widget/text_button.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -41,9 +43,14 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const BookReating(
             mainAxisAlignment: MainAxisAlignment.center,
-          )
+          ),
+          const SizedBox(
+            height: 37,
+          ),
+          const BooksAction(),
         ],
       ),
     );
   }
 }
+
