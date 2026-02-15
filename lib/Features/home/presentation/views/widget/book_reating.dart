@@ -32,6 +32,3 @@ class BookReating extends StatelessWidget {
     );
   }
 }
-
-
-

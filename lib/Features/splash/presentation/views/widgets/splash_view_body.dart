@@ -1,10 +1,9 @@
-import 'package:bookly1/Features/home/data/presentation/views/home_view.dart';
+import 'package:bookly1/Features/home/presentation/views/home_view.dart';
 import 'package:bookly1/Features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:bookly1/core/utils/assets.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -27,8 +26,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     initSlidAnimation();
     navigateToHome();
   }
-
-
 
   @override
   void dispose() {
@@ -53,8 +50,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
       vsync: this,
       duration: const Duration(seconds: 10),
     );
-    slidingAnimation = Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
-        .animate(animationController);
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
     animationController.forward();
   }
 
@@ -65,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       //   transition: Transition.fade,
       //   duration: kTransition,
       // );
-      GoRouter.of(context).push('/homeView'); 
+      GoRouter.of(context).push('/homeView');
     });
   }
 }

@@ -1,4 +1,4 @@
-import 'package:bookly1/Features/home/data/presentation/views/widget/book_reating.dart';
+import 'package:bookly1/Features/home/presentation/views/widget/book_reating.dart';
 import 'package:bookly1/core/utils/assets.dart';
 import 'package:bookly1/core/utils/styles.dart';
 import 'package:flutter/material.dart';

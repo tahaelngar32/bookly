@@ -1,4 +1,4 @@
-import 'package:bookly1/Features/home/data/presentation/views/home_view.dart';
+import 'package:bookly1/Features/home/presentation/views/home_view.dart';
 import 'package:bookly1/constens.dart';
 import 'package:bookly1/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
@@ -28,5 +28,3 @@ class BooklyApp extends StatelessWidget {
     );
   }
 }
-
-
