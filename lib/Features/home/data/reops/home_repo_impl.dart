@@ -5,6 +5,7 @@ import 'package:bookly1/Features/home/data/reops/home_repo.dart';
 import 'package:bookly1/core/errors/failures.dart';
 import 'package:bookly1/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
@@ -21,7 +22,10 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(books); // right  القيمة الصحيحة جاية من ايزر
     } on Exception catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
     }
   }
 
