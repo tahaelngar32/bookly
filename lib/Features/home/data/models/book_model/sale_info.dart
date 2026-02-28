@@ -1,13 +1,24 @@
-class SaleInfo {
-  SaleInfo();
+import 'package:equatable/equatable.dart';
 
-  factory SaleInfo.fromJson(Map<String, dynamic> json) {
-    // TODO: implement fromJson
-    throw UnimplementedError('SaleInfo.fromJson($json) is not implemented');
-  }
+class SaleInfo extends Equatable {
+  final String? country;
+  final String? saleability;
+  final bool? isEbook;
 
-  Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
-  }
+  const SaleInfo({this.country, this.saleability, this.isEbook});
+
+  factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
+        country: json['country'] as String?,
+        saleability: json['saleability'] as String?,
+        isEbook: json['isEbook'] as bool?,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'country': country,
+        'saleability': saleability,
+        'isEbook': isEbook,
+      };
+
+  @override
+  List<Object?> get props => [country, saleability, isEbook];
 }

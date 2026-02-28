@@ -1,18 +1,12 @@
 import 'package:bookly1/Features/home/data/reops/home_repo_impl.dart';
 import 'package:bookly1/Features/home/presentation/manger/feauterd_books_cubit/featuerd_books_cubit.dart';
 import 'package:bookly1/Features/home/presentation/manger/newset_book_cubit/newset_book_cubit.dart';
-import 'package:bookly1/Features/home/presentation/views/home_view.dart';
 import 'package:bookly1/constens.dart';
-import 'package:bookly1/core/utils/api_service.dart';
 import 'package:bookly1/core/utils/app_router.dart';
 import 'package:bookly1/core/utils/servies_locaitor.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'Features/splash/presentation/views/splash_view.dart';
 
 void main() {
   setupServiceLocaitor(); // جاية من مكتبة get
@@ -30,7 +24,7 @@ class BooklyApp extends StatelessWidget {
           create: (context) => FeatuerdBooksCubit(
             getIt.get<
                 HomeRepoImpl>(), //servies_locaitor موجوده في الكلاس ده  مكتبة لاختصار الكود
-          ),
+          )..featchFeatuerdBooks(), //بتنفذ كود بعد الرتيرن مباشرة استدعاء للدالة
         ),
         BlocProvider(
           create: (context) => NewsetBookCubit(
