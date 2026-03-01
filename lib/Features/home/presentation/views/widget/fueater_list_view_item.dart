@@ -18,7 +18,7 @@ class FeatureBooksListView extends StatelessWidget {
             height: MediaQuery.of(context).size.height * .25,
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),//بتعمل ارتداد للشاشة
-                itemCount: state.books.length,
+                itemCount: 3,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return  Padding(
