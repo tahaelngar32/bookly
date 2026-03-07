@@ -10,9 +10,9 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FeatuerdBooksCubit, FeatuerdBooksState>(
+    return BlocBuilder<NewsetBookCubit, NewsetBookState>(
         builder: (context, state) {
-      if (state is FeatuerdBooksSuccess) {
+      if (state is NewsetBookSuccess) {
         return ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -26,8 +26,8 @@ class BestSellerListView extends StatelessWidget {
                 ),
               );
             });
-      } else if (state is FeatuerdBooksFailuer) {
-         return Center(child: CustomTextError(errMessage: state.errorMessag));
+      } else if (state is NewsetBookFailuer) {
+         return Center(child: CustomTextError(errMessage: state.errMessage));
        } else {
         return const Center(child: CircularProgressIndicator());
        }

@@ -27,6 +27,10 @@ class ServerFailure extends Failures {
       case DioExceptionType.cancel:
         return ServerFailure('cancel');
       case DioExceptionType.connectionError:
+      if (dioException.error is SocketException) {
+          // في حالة عدم وجود انترنت
+          return ServerFailure('No intrent Conuction');
+        }
         return ServerFailure('connectionError');
       case DioExceptionType.unknown:
         if (dioException.error is SocketException) {

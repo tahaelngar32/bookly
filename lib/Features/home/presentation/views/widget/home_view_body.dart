@@ -9,8 +9,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const BouncingScrollPhysics();
     return const CustomScrollView(
+      physics: BouncingScrollPhysics(), // عشان نضيف حركة في السكرول
       slivers: [
         SliverToBoxAdapter(
           child: Column(
@@ -37,7 +37,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
+        SliverToBoxAdapter(
           //عشان نشيل شرينغ راب بدل من سليفر تو بوكس ادبتر
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),

@@ -1,5 +1,4 @@
 import 'package:bookly1/core/utils/styles.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextError extends StatelessWidget {
@@ -7,9 +6,12 @@ class CustomTextError extends StatelessWidget {
   final String errMessage;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      errMessage,
-      style: Styles.style18,
+    return Center(
+      child: Text(
+        errMessage,
+        style: Styles.style18,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
