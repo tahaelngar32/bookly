@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 
 class BookReating extends StatelessWidget {
   const BookReating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start, required this.avergReating, required this.countReating});
   final MainAxisAlignment mainAxisAlignment;
+  final int avergReating;
+  final int countReating;
+
   @override
   Widget build(BuildContext context) {
     return const Row(
