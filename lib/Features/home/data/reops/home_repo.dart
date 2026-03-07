@@ -6,4 +6,5 @@ abstract class HomeRepo {
   Future<Either<Failures, List<BookModel>>>
       fetchNewsetBooks(); //Eitherمكتبة جاية من dartz وديا اضافة بتخليني اضيف 2 رتيرن
   Future<Either<Failures, List<BookModel>>> fetchFeaturedBooks();
+  Future<Either<Failures, List<BookModel>>> fetchSimilarBooks({required String category});
 }
