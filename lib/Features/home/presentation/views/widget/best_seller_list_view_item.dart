@@ -13,23 +13,13 @@ final BookModel bookModel;
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push('/BookDetalisView');
+        GoRouter.of(context).push('/BookDetalisView',extra: bookModel);
+
       },
       child: SizedBox(
         height: 125,
         child: Row(
           children: [
-            // AspectRatio(
-            //   aspectRatio: 2.5 / 4,
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //         borderRadius: BorderRadius.circular(8),
-            //         image: const DecorationImage(
-            //           image: AssetImage(AssetsData.testImage),
-            //           fit: BoxFit.fill,
-            //         )),
-            //   ),
-            // ),
             CustomBookImage(imageUrl: bookModel.volumeInfo?.imageLinks?.thumbnail??"",),
             const SizedBox(
               width: 30,
