@@ -5,9 +5,7 @@ import 'package:bookly1/Features/home/presentation/views/book_details_view.dart'
 import 'package:bookly1/Features/home/presentation/views/home_view.dart';
 import 'package:bookly1/Features/search/presentation/views/search_view.dart';
 import 'package:bookly1/Features/splash/presentation/views/splash_view.dart';
-import 'package:flutter/src/widgets/basic.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:bookly1/core/utils/servies_locaitor.dart';
 

@@ -22,8 +22,7 @@ class BooklyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => FeatuerdBooksCubit(
-            getIt.get<
-                HomeRepoImpl>(), //servies_locaitor موجوده في الكلاس ده  مكتبة لاختصار الكود
+            getIt.get<HomeRepoImpl>(), //servies_locaitor موجوده في الكلاس ده  مكتبة لاختصار الكود
           )..featchFeatuerdBooks(), //بتنفذ كود بعد الرتيرن مباشرة استدعاء للدالة
         ),
         BlocProvider(
